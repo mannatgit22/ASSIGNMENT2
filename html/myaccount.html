@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORKSHOP-HOME</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="scripttype" href="/JAVA/java.js">
+
+</head>
+<style>
+    .content8
+    {
+       margin:60px 610px 50px 380px;
+       /* justify-items: center; */
+       
+       
+    }
+    .account-section {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 50px;
+    background-color: #b8b8b8;
+    padding: 50px 0px 130px 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width:150%;
+    height:400px;
+
+
+}
+
+.profile-image img {
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #756e75;
+}
+
+.account-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.detail label {
+    width: 100px;
+    font-weight: bold;
+    color: #585358;
+}
+
+.detail input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #645f64;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.edit-icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: -30px;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.save-button,
+.cancel-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.save-button {
+    background-color: #78b774;
+    color: #ffffff;
+}
+
+.cancel-button {
+    background-color: #e46a69;
+    color: #ffffff;
+}
+</style>
+
+<body>
+
+
+<nav class="vertical-navbar">
+<div >
+    
+    <h1 style="display: flex;font-size: 50px; font-family:'Times New Roman', Times, serif; color:rgb(134, 21, 239); margin: 5px 0px 70px 0px;">
+        <img style="margin: 11px 15px 0px 20px; height:38px; width: 38px;" src="/MEDIA/w.jpg" alt="Workshop Logo">
+        Workshop
+    </h1>
+    <a class="normal"  href="home.html"><img src="/MEDIA/H.jpg" alt="Home Icon" > Home</a>
+    <a class="normal"  href="customers.html"><img src="/MEDIA/C.jpg" alt="Customers Icon"> Customers</a>
+    <a class="normal"  href="departments.html"><img src="/MEDIA/D.png" alt="Departments Icon" > Departments</a>
+    <a class="normal"  href="media.html"><img src="/MEDIA/M.png" alt="Media Icon" > Media</a>
+    <a  href="myaccount.html" class="account-link active" style="font-size: 35px;"><img src="/MEDIA/A.webp" alt="Account Icon" > My Account</a>
+</div>
+</nav>
+
+
+<nav >
+    <div class="horizontal-navbar">
+        
+            <input type="text" placeholder="Search In Home"
+                   name="search">
+            <button>
+                <img  src="/MEDIA/search.png" alt="search logo" style="width: 30px;">
+            </button>
+        
+    </div>
+    </nav>
+
+<div class="content8">
+    <div class="account-section">
+        <div class="profile-image">
+            <img src="/MEDIA/profile.jpg" alt="Profile">
+        </div><br>
+        <div class="account-details">
+            <div class="detail">
+                <label>Name</label>
+                <input type="text" value="John Doe" readonly>
+                <img src="/MEDIA/edit.png" alt="Edit" class="edit-icon">
+            </div>
+            <div class="detail">
+                <label>Email</label>
+                <input type="text" value="example@gmail.com" readonly>
+                <img src="/MEDIA/edit.png" alt="Edit" class="edit-icon">
+            </div>
+            <div class="detail">
+                <label>Phone Number</label>
+                <input type="text" value="9134837948" readonly>
+                <img src="/MEDIA/edit.png" alt="Edit" class="edit-icon">
+            </div>
+            <div class="detail">
+                <label>Date Of Birth</label>
+                <input type="text" value="July 16, 1999" readonly>
+                <img src="/MEDIA/edit.png" alt="Edit" class="edit-icon">
+            </div>
+            <div class="buttons">
+                <button class="save-button">SAVE</button>
+                <button class="cancel-button">CANCEL</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORKSHOP-HOME</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<style>
+    .item1{
+    margin-right: 50px;
+    margin-top:20px;
+    margin-left: 380px;
+    /* margin-bottom:70px; */
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    color: white;
+    padding: 1px;
+    border-radius: 20px;
+    
+}
+.media-section {
+     /* margin-right: 50px; */
+    margin-top:20px;
+   margin-left: 380px;
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    width: 72%;
+    height: auto;
+   
+}
+.media-grid {
+    display: grid;
+    /* flex-wrap: nowrap; */
+    gap: 15px;
+    overflow-x: auto;
+    padding: 0px;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-between;
+
+    
+}
+.media-item {
+    flex:auto;
+    background-color: #191515;
+    border: 1px solid #170b0b;
+    border-radius:10px;
+    padding: 20px;
+    display:flex;
+    /* align-items: center; */
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 180px;
+    height: 180px;
+    margin:25px 15px 0px 15px
+}
+.media-item img {
+    max-width: 100%;
+    max-height: 100%;
+    
+    border-radius: 20px;
+}
+.media-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.media-item iframe {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+
+</style>
+<body>
+
+
+<nav class="vertical-navbar">
+<div >
+    
+    <h1 style="display: flex;font-size: 40px; font-family:'Times New Roman', Times, serif; color:rgb(134, 21, 239);">
+        <img style="margin: 2px 15px 0px 20px; height:38px; width: 38px;" src="/MEDIA/w.jpg" alt="Workshop Logo">
+        Workshop
+    </h1>
+    <a class="normal"  href="home.html"><img src="/MEDIA/H.jpg" alt="Home Icon" > Home</a>
+    <a class="normal"  href="customers.html"><img src="/MEDIA/C.jpg" alt="Customers Icon"> Customers</a>
+    <a class="normal"  href="departments.html"><img src="/MEDIA/D.png" alt="Departments Icon" > Departments</a>
+    <a class="active"  href="media.html"><img src="/MEDIA/M.png" alt="Media Icon" > Media</a>
+    <a  href="myaccount.html" class="account-link"><img src="/MEDIA/A.webp" alt="Account Icon" > My Account</a>
+</div>
+</nav>
+
+
+<nav >
+    <div class="horizontal-navbar">
+        
+            <input type="text" placeholder="Search In Home"
+                   name="search">
+            <button>
+                <img  src="/MEDIA/search.png" alt="search logo" style="width: 30px;">
+            </button>
+        
+    </div>
+    </nav>
+
+    
+<div class="content9">
+    <div class="images item1" style="background-color: rgb(126, 167, 4);">
+        <h1>&emsp;IMAGES</h1>
+    </div>
+    <section class="media-section">
+        
+        <div class="media-grid">
+            <div class="media-item">
+                <img  style="max-height: 200%;" src="/MEDIA/image1.jpg" alt="Media Image">
+            </div>
+            <div class="media-item">
+                <img src="/MEDIA/image2.webp" alt="Media Image">
+            </div>
+            <div class="media-item">
+                <img src="/MEDIA/image3.webp" alt="Media Image">
+            </div>
+            <div class="media-item">
+                <img src="/MEDIA/image4.jpg" alt="Media Image">
+            </div>
+            <div class="media-item">
+                <img src="/MEDIA/image5.jpg" alt="Media Image">
+            </div>
+            <div class="media-item">
+                <img src="/MEDIA/image6.webp" alt="Media Image">
+            </div>
+            <div class="media-item">
+                <img src="/MEDIA/image7.jpg" alt="Media Image">
+            </div>
+            <div class="media-item">
+                <img src="/MEDIA/image8.jpg" alt="Media Image">
+            </div>
+            
+        </div>
+    </section>
+
+
+
+
+
+
+
+<div class="video item1" style="background-color: rgb(244, 15, 15);">
+    <h1 >&emsp;VIDEO</h1>
+</div>
+<section class="media-section">
+
+<div class="media-grid">
+    <div class="media-item">
+        <iframe width="706" height="397" src="https://www.youtube.com/embed/MWp31pluBQU" title="Jujutsu Kaisen : the Movie  &quot;The Shinjuku Showdown Arc&quot; | First Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="media-item">
+        <iframe width="706" height="397" src="https://www.youtube.com/embed/E7WytLM2KvY" title="Attack on Titan Final Trailer｜The Final Season Part 4｜Official" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="media-item">
+        <iframe width="706" height="397" src="https://www.youtube.com/embed/wyiZWYMilgk" title="Demon Slayer: Kimetsu no Yaiba Infinity Castle | OFFICIAL TRAILER" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="media-item">
+        <iframe width="706" height="397" src="https://www.youtube.com/embed/OdQrlp3uYQM" title="Solo Leveling Season 2 | OFFICIAL TEASER TRAILER" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+<div class="audio item1" style="background-color: rgb(32, 4, 143);">
+    <h1 style="background-color: rgb(32, 4, 143);">&emsp;AUDIO</h1>
+</div>
+
+
+<section class="media-section">
+
+    <div class="media-grid">
+        <div style=" display:grid;" class="media-item">
+            <img style="height:130px;width: 200px;margin:auto;" src="/MEDIA/light.jpg"><br>
+            <audio style="height:35px;width:200px;"controls autoplay muted>
+                <!-- <source src="horse.ogg" type="audio/ogg">  -->
+                <source src="/MEDIA/light.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+              </audio>
+        </div>
+        <div style=" display:grid;" class="media-item">
+            <img style="height:130px;width: 200px;margin:auto;" src="/MEDIA/image9.jpg"><br>
+            <audio style="height:35px;width:200px;"controls autoplay muted>
+                <!-- <source src="horse.ogg" type="audio/ogg">  -->
+                <source src="/MEDIA/eren.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+              </audio>
+        </div>
+        <div style=" display:grid;" class="media-item">
+            <img style="height:130px;width: 200px;margin:auto;" src="/MEDIA/tanjiro.jpg"><br>
+            <audio style="height:35px;width:200px;"controls autoplay muted>
+                <!-- <source src="horse.ogg" type="audio/ogg">  -->
+                <source src="/MEDIA/tanjiro.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+              </audio>
+        </div>
+        <div style=" display:grid;" class="media-item">
+            <img style="height:130px;width: 200px;margin:auto;" src="/MEDIA/gojo.jpg"><br>
+            <audio style="height:35px;width:200px;"controls autoplay muted>
+                <!-- <source src="horse.ogg" type="audio/ogg">  -->
+                <source src="/MEDIA/gojo.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+              </audio>
+        </div>
+    </section>
+    <br><br>
+</div>
+
+</body>
+</html>
