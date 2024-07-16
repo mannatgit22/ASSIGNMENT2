@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WORKSHOP-HOME</title>
     <link rel="stylesheet" href="/CSS/style.css">
-    <link rel="scripttype" href="/JAVA/java.js">
+    <!-- <link rel="scripttype" href="/JAVA/java.js"> -->
 
 </head>
 <style>
     .content8
     {
-       margin:60px 610px 50px 380px;
-       /* justify-items: center; */
+       margin:auto 610px 50px 380px;
+       padding-top:110px;
+       
        
        
     }
@@ -20,21 +21,26 @@
     display: grid;
     grid-template-columns: 2fr 2fr;
     gap: 50px;
-    background-color: #b8b8b8;
+    background-color: #ac5576;
     padding: 50px 0px 130px 300px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width:150%;
     height:400px;
+    
 
 
 }
-
+.profile-image
+{
+    display:grid;
+}
 .profile-image img {
     width:200px;
     height: 200px;
     border-radius: 50%;
     border: 2px solid #756e75;
+    /* row-gap: 20px; */
 }
 
 .account-details {
@@ -53,7 +59,7 @@
 .detail label {
     width: 100px;
     font-weight: bold;
-    color: #585358;
+    color: #1b191b;
 }
 
 .detail input {
@@ -65,12 +71,26 @@
 }
 
 .edit-icon {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    right: -30px;
+    width: 30px;
+    height: 30px;
+    /* margin-left: 20px; */
+    position:absolute;
+    right: -40px;
     cursor: pointer;
+    font-size: 18px;
+    border: none;
 }
+.edit-button {
+    position:absolute;
+    /* justify-content: space-between; */
+    top: 300px;
+    right: 580px;
+    /* background: none; */
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+
+} 
 
 .buttons {
     display: flex;
@@ -88,13 +108,20 @@
 }
 
 .save-button {
-    background-color: #78b774;
+    background-color: hsl(116, 44%, 48%);
     color: #ffffff;
 }
 
 .cancel-button {
-    background-color: #e46a69;
+    background-color: #d60a0a;
     color: #ffffff;
+}
+.saved-data {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e0ffe0;
+    border-radius: 5px;
+    text-align: center;
 }
 </style>
 
@@ -104,8 +131,8 @@
 <nav class="vertical-navbar">
 <div >
     
-    <h1 style="display: flex;font-size: 50px; font-family:'Times New Roman', Times, serif; color:rgb(134, 21, 239); margin: 5px 0px 70px 0px;">
-        <img style="margin: 11px 15px 0px 20px; height:38px; width: 38px;" src="/MEDIA/w.jpg" alt="Workshop Logo">
+    <h1 style="display: flex;margin: 10px 0px 11px -10px; font-size: 50px; font-family:'Times New Roman', Times, serif; color:rgb(98, 18, 67);">
+        <img style=" border:0; margin: 2px 15px 0px 10px; height:50px; width: 50px;" src="/MEDIA/w.jpg" alt="Workshop Logo">
         Workshop
     </h1>
     <a class="normal"  href="home.html"><img src="/MEDIA/H.jpg" alt="Home Icon" > Home</a>
@@ -132,35 +159,48 @@
 <div class="content8">
     <div class="account-section">
         <div class="profile-image">
-            <img src="/MEDIA/profile.jpg" alt="Profile">
-        </div><br>
+            <img id="profilePic" src="/MEDIA/profile.jpg" alt="Profile Image">
+            <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+            <button class="edit-button" onclick="document.getElementById('imageUpload').click()">✎</button>
+        </div>
+        <input  class="edit-icon" type="image" src="/MEDIA/edit.png" alt="Submit" width="48" height="48"><br>
         <div class="account-details">
             <div class="detail">
-                <label>Name</label>
-                <input type="text" value="John Doe" readonly>
-                <img src="/MEDIA/edit.png" alt="Edit" class="edit-icon">
+                <label for="name">Name</label>
+                <input type="text" id="name" value="John Doe" readonly>
+                <button class="edit-icon" type="button" onclick="editField('name')">✎</button>
+                
             </div>
             <div class="detail">
                 <label>Email</label>
-                <input type="text" value="example@gmail.com" readonly>
-                <img src="/MEDIA/edit.png" alt="Edit" class="edit-icon">
+                <input type="text"  id="email" value="example@gmail.com" readonly>
+                <button class="edit-icon" type="button" onclick="editField('email')">✎</button>
+                
+                
             </div>
             <div class="detail">
-                <label>Phone Number</label>
-                <input type="text" value="9134837948" readonly>
-                <img src="/MEDIA/edit.png" alt="Edit" class="edit-icon">
+                <label>Phone No.</label>
+                <input type="text" id="phone" value="9134837948" readonly>
+                <button class="edit-icon" type="button" onclick="editField('phone')">✎</button>
+               
             </div>
             <div class="detail">
                 <label>Date Of Birth</label>
-                <input type="text" value="July 16, 1999" readonly>
-                <img src="/MEDIA/edit.png" alt="Edit" class="edit-icon">
+                <input type="text" id="dob" value="July 16, 1999" readonly>
+                <button class="edit-icon" type="button" onclick="editField('dob')">✎</button>
+                
             </div>
             <div class="buttons">
-                <button class="save-button">SAVE</button>
-                <button class="cancel-button">CANCEL</button>
+                <button type="button" class="save-button" onclick="saveData()">SAVE</button>
+                <button type="button" class="cancel-button" onclick="resetForm()" >CANCEL</button>
             </div>
         </div>
+        
     </div>
+    <div id="savedData" class="saved-data"></div>
+    
+    </div>
+    <script src="/JAVA/java.js"></script>
 </div>
 </div>
 </div>
